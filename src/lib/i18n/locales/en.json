@@ -1,0 +1,466 @@
+{
+  "agent": {
+    "edit": {
+      "back": "return",
+      "city": "City",
+      "confirmPasswordPlaceholder": "Please enter your password again",
+      "country": "nation",
+      "email": "Mail",
+      "emailPlaceholder": "Please enter your email address",
+      "location": "location",
+      "name": "Agent name",
+      "namePlaceholder": "Please enter the agent name",
+      "parent": "Superior agent",
+      "passwordPlaceholder": "password",
+      "phone": "Telephone",
+      "phonePlaceholder": "Please enter your phone number",
+      "remark": "Remark",
+      "remarkPlaceholder": "Please enter the comment information",
+      "saveError": "Saving failed",
+      "state": "province",
+      "title": "Editorial Agent",
+      "type": "Agent Level"
+    },
+    "levels": {
+      "7": "Ordinary agent",
+      "8": "Regional Agent",
+      "9": "General Agent"
+    },
+    "list": {
+      "search": {
+        "error": "Search failed, please try again later",
+        "placeholder": "Agent name"
+      },
+      "table": {
+        "columns": {
+          "actions": "operate",
+          "city": "Urban area",
+          "createDate": "Creation date",
+          "email": "Mail",
+          "level": "level",
+          "name": "Agent name",
+          "parent": "Superior Agent",
+          "phone": "Telephone",
+          "remark": "Remark",
+          "state": "Provincial and municipal",
+          "updateDate": "Update date",
+          "index": "#"
+        }
+      },
+      "title": "Agent List"
+    },
+    "users": {
+      "edit": {
+        "email": "Mail",
+        "error": {
+          "emptyFields": "Please fill in all password fields",
+          "needAtLeastOne": "Fill in at least one email address and mobile phone, which is the \"user name\" of the login agent platform.",
+          "passwordMismatch": "The passwords entered twice are inconsistent"
+        },
+        "password": "password",
+        "phoneNumber": "phone number",
+        "title": "Edit Agent User"
+      },
+      "list": {
+        "search": {
+          "placeholder": "Mobile phone/email/agent name"
+        },
+        "table": {
+          "columns": {
+            "actions": "operate",
+            "createDate": "Creation date",
+            "email": "Email (user name)",
+            "phone": "phone number",
+            "status": "state",
+            "index": "#"
+          }
+        },
+        "total": "Total number of users: {count}"
+      }
+    }
+  },
+  "buttons": {
+    "add": "Add to",
+    "back": "return",
+    "cancel": "Cancel",
+    "confirm": "confirm",
+    "edit": "edit",
+    "export": "Export",
+    "save": "save",
+    "search": "search",
+    "view": "Check"
+  },
+  "common": {
+    "agent": "Agent",
+    "city": "City",
+    "country": "nation",
+    "disabled": "Disabled",
+    "doNotEnabled": "Not enabled",
+    "enabled": "Enable",
+    "mobilePayment": "Mobile payment",
+    "no": "no",
+    "noRecord": "No record",
+    "notEnabled": "Not enabled",
+    "state": "province",
+    "yes": "yes"
+  },
+  "dashboard": {
+    "outlet": {
+      "companyCount": "Number of companies: {count}",
+      "title": "Shop",
+      "total": "Stores: {count}",
+      "unsigned": "Unregistered stores: {count}",
+      "weeklyActive": "Zhoushengyi store: {count}"
+    },
+    "productKey": {
+      "cancelled": "Undoped: {count}",
+      "title": "Registration code",
+      "total": "Total: {count}",
+      "unused": "Not used: {count}",
+      "used": "Used : {count}"
+    },
+    "valueAdded": {
+      "aliPay": "Bind Alipay stores {count}",
+      "smsRecharge": "SMS recharge shop {count}",
+      "title": "Value-added applications",
+      "wxPay": "Bind WeChat payment stores {count}",
+      "wxStore": "WeChat stores {count}"
+    },
+    "viewDetails": "View details",
+    "welcome": "Welcome back, your last login time: {lastLoginTime}"
+  },
+  "error": {
+    "accessDenied": "permission denied",
+    "backToLogin": "Return to the login page",
+    "errorHappened": "An error occurred",
+    "unknownError": "An unknown error occurred"
+  },
+  "export": {
+    "productKey": {
+      "settle": "Registration code settlement"
+    }
+  },
+  "layout": {
+    "changePassword": "Modify password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Please enter the new password again",
+    "logout": "Log out",
+    "nav": {
+      "agentList": "Agent List",
+      "agentManagement": "Agent Management",
+      "agentUserList": "Agent User List",
+      "home": "front page",
+      "loginLog": "Login log",
+      "marketingManagement": "Marketing Management",
+      "merchantInfo": "Merchant information",
+      "mobilePayment": "Mobile payment",
+      "outletList": "Store List",
+      "outletManagement": "Store Management",
+      "paymentApplyList": "Application List",
+      "productKeyList": "Registration code list",
+      "productKeyManagement": "Registration code management",
+      "productKeySettlement": "Registration code settlement",
+      "salesRanking": "Sales ranking",
+      "smsBalance": "Balance and recharge",
+      "smsChargeList": "Recharge record",
+      "smsManagement": "SMS Management",
+      "smsSendList": "Send records",
+      "userList": "User List",
+      "userManagement": "User Management"
+    },
+    "newPassword": "New Password",
+    "newPasswordPlaceholder": "Please enter a new password",
+    "oldPassword": "Original password",
+    "oldPasswordPlaceholder": "Please enter the original password",
+    "passwordChangeError": {
+      "emptyFields": "Please fill in all password fields",
+      "invalidOldPassword": "The original password is incorrect",
+      "passwordMismatch": "The passwords entered twice are inconsistent",
+      "samePassword": "The new password cannot be the same as the old password"
+    },
+    "passwordChangeSuccess": "Password modification was successful",
+    "title": "Agent Platform"
+  },
+  "login": {
+    "emailPlaceholder": "Mail",
+    "error": {
+      "emptyFields": "Please enter your email and password",
+      "invalidPassword": "Error password",
+      "invalidRole": "Role type is wrong, no permissions, please contact the administrator",
+      "outletNotFound": "The store does not exist",
+      "userNotFound": "The user does not exist"
+    },
+    "passwordPlaceholder": "password",
+    "submit": "Log in",
+    "title": "Agent login"
+  },
+  "outlet": {
+    "auth": {
+      "official": "formal",
+      "trial": "try out"
+    },
+    "detail": {
+      "activeMoveStock": "Activate dialing",
+      "agent": "Agent",
+      "auth": "Authorization",
+      "bindAlipay": "Bind Alipay",
+      "bindWxPay": "Bind WeChat",
+      "cancel": "Revoke the registration code",
+      "cancelMainShop": "Revoke the main store",
+      "checkProductKey": {
+        "error": {
+          "productKey": "Registration code is wrong!"
+        }
+      },
+      "createDate": "Creation date",
+      "expired": "Expired",
+      "expiryDate": "Date of Expiry",
+      "lastLoginTime": "Last login",
+      "mobilePayment": "Mobile payment",
+      "netshopSetting": "WeShop/WeChat Member Settings",
+      "otherOutlets": "Other chain stores",
+      "pickupProductKey": {
+        "error": {
+          "agentId": "Please select an agent",
+          "productKey": "The registration code cannot be empty!"
+        }
+      },
+      "recharge": "SMS recharge",
+      "registrationCode": "Registration code",
+      "remark": "Remark",
+      "remarkModal": {
+        "orderNo": "Order number",
+        "others": "Other notes",
+        "qq": "QQ",
+        "wangwang": "Wangwang"
+      },
+      "renew": "Renewal",
+      "setMainShop": "Set as main store",
+      "status": "state",
+      "storeName": "Store name",
+      "type": "type",
+      "unbindAlipay": "Unbind Alipay",
+      "unbindWxPay": "Unbind WeChat Pay",
+      "upgrade": "upgrade",
+      "upgradeModal": {
+        "alert": {
+          "reduce": "Downgrade",
+          "renew": "Will renew for one year, are you sure?",
+          "upgrade": "Are you sure that it will be from \"{curVerMsg}-{curTypeMsg}\"{upgrade} to \"{verMsg}-{typeMsg}\"."
+        },
+        "enterProductKey": "Please enter the registration code...",
+        "error": "Upgrade/renewal failed",
+        "getProductKeys": "extract",
+        "ifGift": "Gift",
+        "productKey": "Registration code",
+        "remark": "Store Notes",
+        "success": "Upgrade/renewal successfully!"
+      },
+      "upgrade_log": {
+        "code": "Registration code",
+        "date": "Date of use",
+        "key_type": {
+          "0": "long",
+          "1": "deadline"
+        },
+        "month": "Months",
+        "new_expiry_date": "Current expiration date",
+        "original_expiry_date": "Original expiration date",
+        "remark": "Remark",
+        "title": "Upgrade record",
+        "type": "Registration code type"
+      },
+      "user": "user",
+      "wechatShop": "WeChat store",
+      "wxCustomer": "Micro Membership"
+    },
+    "expired": "Expired",
+    "longTerm": "long",
+    "notExpired": "Not expired",
+    "type": {
+      "chainStore": "chain",
+      "singleStore": "Single store"
+    },
+    "versionFeatures": {
+      "0": "Domestic version",
+      "1": "Multilingual (International Edition)"
+    }
+  },
+  "outlets": {
+    "list": {
+      "selectCount": "Selected: {count}",
+      "table": {
+        "columns": {
+          "authorization": "Authorization",
+          "companyCode": "Company Code",
+          "countryStateCity": "Country-Province-City",
+          "creationDate": "Creation date",
+          "expirationDate": "Date of Expiry",
+          "expired": "Expired",
+          "headOffice": "Headquarters Store",
+          "operate": "operate",
+          "outletCode": "Store number",
+          "registrationCode": "Registration code",
+          "remarks": "Remark",
+          "status": "state",
+          "storeName": "Store name",
+          "storeNumber": "Store number",
+          "type": "type"
+        },
+        "td": {
+          "updateDate": "Updated date:{updateDate}"
+        }
+      },
+      "total": "Total number of stores: {count}"
+    },
+    "modal": {
+      "move": {
+        "title": "Allocate shops"
+      }
+    },
+    "move": {
+      "error": {
+        "noChange": "There are no stores to allocate!",
+        "noSelect": "Please select a store"
+      },
+      "success": "The allocation was successful, and a total of {result} stores were allocated."
+    },
+    "search": {
+      "enabled": {
+        "0": "Disabled",
+        "1": "Enable",
+        "all": "All statuses"
+      },
+      "hasProductKey": {
+        "0": "try out",
+        "1": "One year",
+        "2": "long",
+        "all": "All registration status"
+      },
+      "isExpired": {
+        "0": "Expired",
+        "1": "Not expired",
+        "2": "Expired within one week",
+        "all": "All Terms"
+      },
+      "multiOutlet": {
+        "0": "Single store",
+        "1": "chain",
+        "all": "All types"
+      },
+      "placeHolder": {
+        "query": "Registration code/store name/note"
+      }
+    }
+  },
+  "pagination": {
+    "items": "strip",
+    "itemsPerPage": "Displayed per page",
+    "next": "Next page",
+    "of": "/",
+    "page": "The",
+    "pages": "Page",
+    "previous": "Previous page"
+  },
+  "payment": {
+    "alipay": "Alipay",
+    "weixin": "WeChat Payment"
+  },
+  "productKeys": {
+    "cancelReserve": {
+      "error": "There is no registration code that can be cancelled for reservation",
+      "success": "There are {result} registration codes to cancel reservation"
+    },
+    "list": {
+      "button": {
+        "create": "Generate a registration code",
+        "move": "Registration code transfer",
+        "reserve": "Mark reservation",
+        "unReserve": "Cancel reservation"
+      },
+      "error": {
+        "noSelected": "No registration code is checked!"
+      },
+      "gift": "Gift",
+      "occupied": {
+        "0": "Not used",
+        "1": "Used",
+        "2": "Reservation",
+        "-1": "Undo",
+        "all": "All statuses"
+      },
+      "search": {
+        "agentId": {
+          "all": "All agents"
+        },
+        "placeholder": "Search the registration code"
+      },
+      "table": {
+        "count": "Total: {count}",
+        "createdDate": "Creation date",
+        "key": "Registration code",
+        "months": "Months",
+        "moveSelect": "Transfer",
+        "openDate": "Store creation date",
+        "outlet": "Shop",
+        "outletMemo": "Store Notes",
+        "remark": "Remark",
+        "reserveSelect": "Reservation",
+        "settlePrice": "Settlement unit price",
+        "status": "state",
+        "type": "type",
+        "unkownAgent": "not specified",
+        "updatedDate": "Update time",
+        "useOrCancelDate": "Use/Undo Date"
+      },
+      "type": {
+        "0": "long",
+        "1": "Deadline (one year)",
+        "all": "All types"
+      },
+      "version": {
+        "0": "Domestic version (D)",
+        "1": "International Edition (I)",
+        "all": "All versions"
+      }
+    },
+    "modal": {
+      "create": {
+        "number": "quantity",
+        "remark": "Remark",
+        "title": "Generate a registration code",
+        "type": "Registration code type",
+        "versionFeatures": "Version Features"
+      },
+      "move": {
+        "title": "Registration code transfer"
+      },
+      "reserve": {
+        "remark": "Remark",
+        "title": "Tag/unregistration code as reserved"
+      }
+    },
+    "move": {
+      "error": "There is no registration code to transfer",
+      "success": "After the allocation is successful, a total of {result} registration codes are allocated."
+    },
+    "reserve": {
+      "error": "No registration code that can be marked as reserved",
+      "success": "There are {result} registration codes marked as reserved"
+    }
+  },
+  "table": {
+    "subtotal": "Subtotal",
+    "total": "total"
+  },
+  "user": {
+    "createDate": "Creation date",
+    "email": "Mail",
+    "jobNo": "Work number",
+    "phoneNumber": "phone number",
+    "role": "Role",
+    "status": "state",
+    "updateDate": "Update date",
+    "userNo": "User ID"
+  }
+}

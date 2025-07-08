@@ -1,0 +1,466 @@
+{
+  "common": {
+    "agent": "代理商",
+    "yes": "是",
+    "no": "否",
+    "enabled": "启用",
+    "disabled": "禁用",
+    "country": "国家",
+    "state": "省份",
+    "city": "城市",
+    "mobilePayment": "移动支付",
+    "noRecord": "没有记录",
+    "doNotEnabled": "未启用",
+    "notEnabled": "未开通"
+  },
+  "buttons": {
+    "save": "保存",
+    "add": "添加",
+    "search": "搜索",
+    "edit": "编辑",
+    "cancel": "取消",
+    "confirm": "确认",
+    "back": "返回",
+    "export": "导出",
+    "view": "查看"
+  },
+  "layout": {
+    "title": "代理商平台",
+    "changePassword": "修改密码",
+    "logout": "退出登录",
+    "oldPassword": "原密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码",
+    "oldPasswordPlaceholder": "请输入原密码",
+    "newPasswordPlaceholder": "请输入新密码",
+    "confirmPasswordPlaceholder": "请再次输入新密码",
+    "passwordChangeSuccess": "修改密码成功",
+    "passwordChangeError": {
+      "emptyFields": "请填写所有密码字段",
+      "passwordMismatch": "两次输入的密码不一致",
+      "invalidOldPassword": "原密码不正确",
+      "samePassword": "新密码不能与旧密码相同"
+    },
+    "nav": {
+      "home": "首页",
+      "agentManagement": "代理商管理",
+      "agentList": "代理商列表",
+      "agentUserList": "代理商用户列表",
+      "productKeyManagement": "注册码管理",
+      "productKeyList": "注册码列表",
+      "productKeySettlement": "注册码结算",
+      "outletManagement": "店铺管理",
+      "outletList": "店铺列表",
+      "userManagement": "用户管理",
+      "userList": "用户列表",
+      "loginLog": "登录日志",
+      "smsManagement": "短信管理",
+      "smsBalance": "余额与充值",
+      "smsChargeList": "充值记录",
+      "smsSendList": "发送记录",
+      "marketingManagement": "营销管理",
+      "salesRanking": "销售排行",
+      "mobilePayment": "移动支付",
+      "paymentApplyList": "申请列表",
+      "merchantInfo": "商户信息"
+    }
+  },
+  "login": {
+    "title": "代理商登录",
+    "emailPlaceholder": "邮箱",
+    "passwordPlaceholder": "密码",
+    "submit": "登录",
+    "error": {
+      "emptyFields": "请输入邮箱和密码",
+      "userNotFound": "用户不存在",
+      "invalidPassword": "密码错误",
+      "invalidRole": "角色类型错误，没有权限，请联系管理员",
+      "outletNotFound": "门店不存在"
+    }
+  },
+  "dashboard": {
+    "welcome": "欢迎回来，您上次登录时间：{lastLoginTime}",
+    "viewDetails": "查看详细",
+    "productKey": {
+      "title": "注册码",
+      "total": "总共 : {count} 个",
+      "used": "已用 : {count} 个",
+      "cancelled": "已撤消 : {count} 个",
+      "unused": "未用 : {count} 个"
+    },
+    "outlet": {
+      "title": "店铺",
+      "companyCount": "公司数 : {count} 个",
+      "total": "店铺量 : {count} 个",
+      "unsigned": "未注册店铺 : {count} 个",
+      "weeklyActive": "周活跃店铺 : {count} 个"
+    },
+    "valueAdded": {
+      "title": "增值应用",
+      "wxPay": "绑定微信支付店铺 {count}个",
+      "aliPay": "绑定支付宝店铺 {count}个",
+      "smsRecharge": "短信充值店铺 {count}个",
+      "wxStore": "微信店铺 {count}个"
+    }
+  },
+  "agent": {
+    "levels": {
+      "7": "普通代理",
+      "8": "区域代理",
+      "9": "总代理"
+    },
+    "edit": {
+      "title": "编辑代理商",
+      "back": "返回",
+      "name": "代理商名称",
+      "namePlaceholder": "请输入代理商名称",
+      "type": "代理商级别",
+      "parent": "上级代理商",
+      "location": "所在地",
+      "country": "国家",
+      "state": "省份",
+      "city": "城市",
+      "phone": "电话",
+      "phonePlaceholder": "请输入电话号码",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入邮箱地址",
+      "remark": "备注",
+      "remarkPlaceholder": "请输入备注信息",
+      "saveError": "保存失败",
+      "passwordPlaceholder": "密码",
+      "confirmPasswordPlaceholder": "请再次输入密码"
+    },
+    "list": {
+      "title": "代理商列表",
+      "search": {
+        "placeholder": "代理商名称",
+        "error": "搜索失败，请稍后重试"
+      },
+      "table": {
+        "columns": {
+          "index": "#",
+          "level": "级别",
+          "parent": "上级代理",
+          "name": "代理商名称",
+          "state": "省市",
+          "city": "市区",
+          "phone": "电话",
+          "email": "邮箱",
+          "remark": "备注",
+          "createDate": "创建日期",
+          "updateDate": "更新日期",
+          "actions": "操作"
+        }
+      }
+    },
+    "users": {
+      "list": {
+        "search": {
+          "placeholder": "手机/邮箱/代理商名"
+        },
+        "table": {
+          "columns": {
+            "index": "#",
+            "email": "邮箱（用户名）",
+            "phone": "手机号码",
+            "status": "状态",
+            "createDate": "创建日期",
+            "actions": "操作"
+          }
+        },
+        "total": "用户总数：{count}"
+      },
+      "edit": {
+        "email": "邮箱",
+        "phoneNumber": "手机号码",
+        "password": "密码",
+        "error": {
+          "needAtLeastOne": "邮箱与手机至少填写一个,这是登录代理商平台的“用户名”.",
+          "emptyFields": "请填写所有密码字段",
+          "passwordMismatch": "两次输入的密码不一致"
+        },
+        "title": "编辑代理商用户"
+      }
+    }
+  },
+  "error": {
+    "unknownError": "发生未知错误",
+    "errorHappened": "发生错误",
+    "backToLogin": "返回登录页",
+    "accessDenied": "没有权限"
+  },
+  "pagination": {
+    "itemsPerPage": "每页显示",
+    "items": "条",
+    "page": "第",
+    "of": "/",
+    "pages": "页",
+    "previous": "上一页",
+    "next": "下一页"
+  },
+  "productKeys": {
+    "modal": {
+      "create": {
+        "type": "注册码类型",
+        "versionFeatures": "版本特性",
+        "title": "生成注册码",
+        "number": "数量",
+        "remark": "备注"
+      },
+      "move": {
+        "title": "划拨注册码"
+      },
+      "reserve": {
+        "title": "标记/取消注册码为预留",
+        "remark": "备注"
+      }
+    },
+    "list": {
+      "type": {
+        "0": "长期",
+        "1": "限期(一年)",
+        "all": "所有类型"
+      },
+      "occupied": {
+        "0": "未用",
+        "1": "已用",
+        "2": "预留",
+        "all": "所有状态",
+        "-1": "撤消"
+      },
+      "version": {
+        "0": "国内版(D)",
+        "1": "国际版(I)",
+        "all": "所有版本"
+      },
+      "search": {
+        "placeholder": "搜索注册码",
+        "agentId": {
+          "all": "所有代理商"
+        }
+      },
+      "table": {
+        "type": "类型",
+        "key": "注册码",
+        "months": "月数",
+        "status": "状态",
+        "remark": "备注",
+        "createdDate": "创建日期",
+        "updatedDate": "更新时间",
+        "unkownAgent": "未指定",
+        "moveSelect": "划拨",
+        "reserveSelect": "预留",
+        "settlePrice": "结算单价",
+        "outlet": "店铺",
+        "outletMemo": "店铺备注",
+        "openDate": "创店日期",
+        "useOrCancelDate": "使用/撤消日期",
+        "count": "总数：{count}个"
+      },
+      "button": {
+        "create": "生成注册码",
+        "move": "划拨注册码",
+        "reserve": "标记预留",
+        "unReserve": "取消预留"
+      },
+      "error": {
+        "noSelected": "没有勾选注册码!"
+      },
+      "gift": "赠"
+    },
+    "move": {
+      "success": "划拨成功,共划拨{result}个注册码。",
+      "error": "没有可划拨的注册码"
+    },
+    "reserve": {
+      "error": "没有可标记为预留的注册码",
+      "success": "共有{result}个注册码标记为预留"
+    },
+    "cancelReserve": {
+      "error": "没有可取消标记预留的注册码",
+      "success": "共有{result}个注册码取消预留"
+    }
+  },
+  "table": {
+    "subtotal": "小计",
+    "total": "合计"
+  },
+  "export": {
+    "productKey": {
+      "settle": "注册码结算"
+    }
+  },
+  "outlets": {
+    "search": {
+      "placeHolder": {
+        "query": "注册码/店名/备注"
+      },
+      "hasProductKey": {
+        "0": "试用",
+        "1": "一年期",
+        "2": "长期",
+        "all": "所有注册状态"
+      },
+      "multiOutlet": {
+        "0": "单店",
+        "1": "连锁",
+        "all": "所有类型"
+      },
+      "enabled": {
+        "0": "禁用",
+        "1": "启用",
+        "all": "所有状态"
+      },
+      "isExpired": {
+        "0": "过期",
+        "1": "未过期",
+        "2": "一周内过期",
+        "all": "所有期限"
+      }
+    },
+    "modal": {
+      "move": {
+        "title": "划拨店铺"
+      }
+    },
+    "list": {
+      "table": {
+        "columns": {
+          "type": "类型",
+          "headOffice": "总店",
+          "authorization": "授权",
+          "status": "状态",
+          "expired": "过期",
+          "companyCode": "公司代码",
+          "storeName": "店铺名称",
+          "storeNumber": "店铺号",
+          "countryStateCity": "国家-省-市",
+          "registrationCode": "注册码",
+          "expirationDate": "到期日期",
+          "creationDate": "创建日期",
+          "remarks": "备注",
+          "operate": "操作",
+          "outletCode": "店铺号"
+        },
+        "td": {
+          "updateDate": "更新日期:{updateDate}"
+        }
+      },
+      "total": "店铺总数：{count}个",
+      "selectCount": "已选：{count}个"
+    },
+    "move": {
+      "error": {
+        "noSelect": "请选择店铺",
+        "noChange": "没有可划拨的店铺!"
+      },
+      "success": "划拨成功,共划拨{result}个店铺。"
+    }
+  },
+  "outlet": {
+    "type": {
+      "singleStore": "单店",
+      "chainStore": "连锁"
+    },
+    "auth": {
+      "official": "正式",
+      "trial": "试用"
+    },
+    "notExpired": "未过期",
+    "expired": "已过期",
+    "versionFeatures": {
+      "0": "国内版",
+      "1": "多语言(国际版)"
+    },
+    "longTerm": "长期",
+    "detail": {
+      "storeName": "店名",
+      "type": "类型",
+      "registrationCode": "注册码",
+      "createDate": "创建日期",
+      "expiryDate": "到期日期",
+      "lastLoginTime": "最后登录",
+      "status": "状态",
+      "auth": "授权",
+      "expired": "过期",
+      "mobilePayment": "移动支付",
+      "wechatShop": "微信店铺",
+      "agent": "代理商",
+      "remark": "备注",
+      "user": "用户",
+      "otherOutlets": "其它连锁店铺",
+      "upgrade_log": {
+        "title": "升级记录",
+        "date": "使用日期",
+        "type": "注册码类型",
+        "code": "注册码",
+        "month": "月数",
+        "original_expiry_date": "原过期日期",
+        "new_expiry_date": "现过期日期",
+        "remark": "备注",
+        "key_type": {
+          "0": "长期",
+          "1": "限期"
+        }
+      },
+      "upgrade": "升级",
+      "renew": "续费",
+      "cancel": "撤销注册码",
+      "cancelMainShop": "撤销总店",
+      "setMainShop": "设为总店",
+      "activeMoveStock": "激活调拨",
+      "bindWxPay": "绑定微信",
+      "bindAlipay": "绑定支付宝",
+      "unbindWxPay": "解绑微信支付",
+      "unbindAlipay": "解绑支付宝",
+      "recharge": "短信充值",
+      "netshopSetting": "微店/微会员设置",
+      "remarkModal": {
+        "orderNo": "订单号",
+        "wangwang": "旺旺",
+        "qq": "QQ",
+        "others": "其它备注"
+      },
+      "wxCustomer": "微会员",
+      "upgradeModal": {
+        "productKey": "注册码",
+        "getProductKeys": "提取",
+        "enterProductKey": "请输入注册码......",
+        "remark": "店铺备注",
+        "ifGift": "赠送",
+        "success": "升级/续费成功!",
+        "error": "升级/续费失败",
+        "alert": {
+          "upgrade": "将由《{curVerMsg}-{curTypeMsg}》{upgrade}为《{verMsg}-{typeMsg}》，您确定吗?",
+          "renew": "将续费一年，您确定吗?",
+          "reduce": "降级"
+        }
+      },
+      "pickupProductKey": {
+        "error": {
+          "agentId": "请选择代理商",
+          "productKey": "注册码不能为空!"
+        }
+      },
+      "checkProductKey": {
+        "error": {
+          "productKey": "注册码错误!"
+        }
+      }
+    }
+  },
+  "payment": {
+    "weixin": "微信支付",
+    "alipay": "支付宝"
+  },
+  "user": {
+    "email": "邮箱",
+    "phoneNumber": "手机号码",
+    "userNo": "用户号",
+    "jobNo": "工号",
+    "status": "状态",
+    "role": "角色",
+    "createDate": "创建日期",
+    "updateDate": "更新日期"
+  }
+}
