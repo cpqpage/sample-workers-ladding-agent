@@ -1,5 +1,5 @@
 import { JWT_SECRET, JWT_REFRESH_SECRET, JWT_TOKEN_EXPIRE_TIME, JWT_TOKEN_EXPIRE_TIME_REFRESH } from '$env/static/private';
-import jwt from 'jsonwebtoken';
+import jwt, { type JwtData } from '@tsndr/cloudflare-worker-jwt';
 import { BaseDao } from '$lib/server/dao/BaseDao';
 import { TokenBlacklist } from '$model/schema';
 import { and, eq, gt, sql } from 'drizzle-orm';
@@ -25,34 +25,37 @@ class TokenBlacklistDao extends BaseDao<typeof TokenBlacklist> {
 
 const tokenBlacklistDao = new TokenBlacklistDao();
 
-export function generateToken(payload: object, expiresIn: number | '1 days' = Number(JWT_TOKEN_EXPIRE_TIME)): string {
-    return jwt.sign(payload, JWT_SECRET, { expiresIn });
+export async function generateToken(payload: object, expiresIn: number = Number(JWT_TOKEN_EXPIRE_TIME)): Promise<string> {
+    (payload as any).exp = Math.floor(Date.now() / 1000) + expiresIn;
+    return await jwt.sign(payload, JWT_SECRET);
 }
 
-export function generateTokenByPayload(payload: object): string {
-    return jwt.sign(payload, JWT_SECRET);
+export async function generateTokenByPayload(payload: object): Promise<string> {
+    return await jwt.sign(payload, JWT_SECRET);
 }
 
-export function generateRefreshToken(payload: object, expiresIn: number | "7 days" = Number(JWT_TOKEN_EXPIRE_TIME_REFRESH)): string {
-    return jwt.sign(payload, JWT_REFRESH_SECRET, { expiresIn });
+export async function generateRefreshToken(payload: object, expiresIn: number = Number(JWT_TOKEN_EXPIRE_TIME_REFRESH)): Promise<string> {
+    (payload as any).exp = Math.floor(Date.now() / 1000) + expiresIn;
+    return await jwt.sign(payload, JWT_REFRESH_SECRET);
 }
 
-export async function verifyToken(token: string): Promise<object | string> {
+export async function verifyToken(token: string): Promise<JwtData<object> | undefined> {
     try {
         // 检查 token 是否在黑名单中
         if (await tokenBlacklistDao.isBlacklisted(token)) {
-            return "blacklisted";
+            return {"payload": "blacklisted"} as any;
         }
-        return jwt.verify(token, JWT_SECRET);
+
+        return await jwt.verify(token, JWT_SECRET);
     } catch (error) {
         console.error(error);
-        return "error";
+        return {"payload": "error"} as any;;
     }
 }
 
-export async function verifyRefreshToken(token: string): Promise<object | string> {
+export async function verifyRefreshToken(token: string) {
     try {
-        return jwt.verify(token, JWT_REFRESH_SECRET);
+        return await jwt.verify(token, JWT_REFRESH_SECRET);
     } catch (error) {
         console.error(error);
         return "error";
@@ -61,9 +64,9 @@ export async function verifyRefreshToken(token: string): Promise<object | string
 
 export async function revokeToken(token: string): Promise<void> {
     try {
-        const decoded = jwt.decode(token) as { exp: number };
-        if (decoded && decoded.exp) {
-            const expiresAt = new Date(decoded.exp * 1000);
+        const decoded = await jwt.decode(token) as JwtData<{ exp: number }>;
+        if (decoded && decoded.payload && decoded.payload.exp) {
+            const expiresAt = new Date(decoded.payload.exp * 1000);
             await tokenBlacklistDao.addToBlacklist(token, expiresAt);
         }
     } catch (error) {

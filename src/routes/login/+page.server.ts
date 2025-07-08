@@ -71,8 +71,8 @@ export const actions = {
 		const userLogDao = new UserLogDao();
 		await userLogDao.createUserLog(user);
 
-		const token = generateToken(tokenPayload);
-		const refreshToken = generateRefreshToken(tokenPayload);
+		const token = await generateToken(tokenPayload);
+		const refreshToken = await generateRefreshToken(tokenPayload);
 		ServerTokenManager.setToken(cookies, token);
 		ServerTokenManager.setRefreshToken(cookies, refreshToken);
 

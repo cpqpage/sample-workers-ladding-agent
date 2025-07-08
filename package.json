@@ -35,7 +35,6 @@
 		"@tailwindcss/vite": "^4.0.0",
 		"@types/crypto-js": "^4.2.2",
 		"@types/file-saver": "^2.0.7",
-		"@types/jsonwebtoken": "^9.0.9",
 		"autoprefixer": "^10.4.21",
 		"drizzle-kit": "^0.31.4",
 		"eslint": "^9.18.0",
@@ -54,6 +53,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@tsndr/cloudflare-worker-jwt": "^3.2.0",
 		"@types/js-cookie": "^3.0.6",
 		"cloudflare": "^4.1.0",
 		"country-state-city": "^3.2.1",
@@ -63,7 +63,6 @@
 		"drizzle-orm": "^0.44.2",
 		"file-saver": "^2.0.5",
 		"js-cookie": "^3.0.5",
-		"jsonwebtoken": "^9.0.2",
 		"svelte-i18n": "^4.0.1",
 		"xlsx": "^0.18.5"
 	}

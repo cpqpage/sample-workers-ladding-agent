@@ -24,16 +24,19 @@ export const handle: Handle = async ({ event, resolve }) => {
         const token = ServerTokenManager.getToken(event.cookies);
         const refreshToken = ServerTokenManager.getRefreshToken(event.cookies);
 
-        let payload: object | string = "error";
+        let payload = 'error' as any;
         if (token) {
-            payload = await verifyToken(token);
+            const jwtData = await verifyToken(token);
+            if(jwtData){
+                payload = (jwtData as any).payload;
+            }
         }
 
         // 如果访问令牌无效或过期，尝试使用刷新令牌
         if (payload === "error" || payload === "blacklisted") {
             if (refreshToken) {
                 const refreshPayload = await verifyRefreshToken(refreshToken);
-                if (typeof refreshPayload !== 'string' && 'email' in refreshPayload && 'password' in refreshPayload) {
+                if (refreshPayload && typeof refreshPayload !== 'string' && 'email' in refreshPayload && 'password' in refreshPayload) {
                     // 生成新的访问令牌
                     const newToken = generateTokenByPayload(refreshPayload);
                     event.setHeaders({
@@ -50,11 +53,11 @@ export const handle: Handle = async ({ event, resolve }) => {
         }
 
         // 从 token 中恢复用户信息
-        if (typeof payload !== 'string' && 'email' in payload && 'password' in payload) {
+        if (payload && typeof payload !== 'string' && 'email' in payload && 'password' in payload) {
             try {
-                const user = await UserService.findByEmail((payload as TokenPayload).email);
+                const user = await UserService.findByEmail((payload as any).email);
                 
-                if (user && user.password === (payload as TokenPayload).password) {
+                if (user && user.password === (payload as any).password) {
                     
                     const outlet = await OutletService.findById(user.outletId??0);
                     const userRole = await RoleService.findByUserId(user.id);
