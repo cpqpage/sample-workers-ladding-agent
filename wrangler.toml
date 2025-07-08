@@ -1,0 +1,18 @@
+name = "ladding-agent"
+account_id = "a0fe00d7b7f1a6b522a2e7f3d909bb6b"
+
+main = "./.cloudflare/worker.js"
+site.bucket = "./.cloudflare/public"
+
+build.command = "npm run build"
+
+compatibility_date = "2021-11-12"
+workers_dev = true
+
+compatibility_flags = [ "nodejs_compat" ]
+
+[[d1_databases]]
+binding = "DB" # available in your Worker on env.DB
+database_name = "sample-d1-ladding"
+#sample-d1-ladding
+database_id = "9141c7d5-1991-4e0a-99b5-5a07212decf6"
