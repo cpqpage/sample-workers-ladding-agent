@@ -1,4 +1,4 @@
-name = "ladding-agent"
+name = "sample-workers-ladding"
 account_id = "a0fe00d7b7f1a6b522a2e7f3d909bb6b"
 
 main = "./.cloudflare/worker.js"
